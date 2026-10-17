@@ -1,0 +1,56 @@
+.settings-stage {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.settings-hand {
+  position: absolute;
+  width: 40vw;
+  max-width: 580px;
+  min-width: 260px;
+  user-select: none;
+  -webkit-user-select: none;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.settings-hand-top {
+  top: 0;
+  right: 0;
+}
+
+.settings-hand-bottom {
+  bottom: 0;
+  left: 0;
+}
+
+.settings-card {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+  width: min(92vw, 460px);
+  max-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 639px) {
+  .settings-hand {
+    width: 48vw;
+    min-width: 200px;
+  }
+
+  .settings-card {
+    width: min(92vw, 400px);
+    max-height: calc(100vh - 100px);
+  }
+}
